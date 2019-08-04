@@ -1,0 +1,205 @@
+<html>
+<head>
+  <!-- Add MathJax to create LaTeX labels for equations and greek letters -->
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js"],
+        "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+        TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+        messageStyle: "none"
+      });
+      </script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+
+      <link rel="stylesheet" type="text/css"
+    href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+
+<!-- choose font -->
+<style>
+body {
+  font-family: "Computer Modern Serif", serif;
+}
+
+div {
+  width:445px;
+  max-width:445px;
+  height:75px;
+  max-height:75px;
+  display:inline-block;
+  font-size:19px;
+}
+</style>
+
+</head>
+
+
+
+
+
+<body>
+
+<h1>Interactive phase diagram of the unbalanced, open Dicke model</h1>
+<h3>Created by Kevin Stitely and Rory Jackson</h3>
+
+<!-- load initial images, maybe we should only import only the first
+image and leave blank windows until the buttons are clicked -->
+
+<img id="PhaseDiagram" src="PhaseDiagramHTML.png" style="position:absolute;top:300px;width:500px">
+<img id="TopPanel" src="BlochSphereNormal.png" style="position:absolute;top:290px;left:490px;width:280px">
+<img id="BottomPanel" src="PhotonNumberNormal.png" style="position:absolute;top:560px;left:490px;width:280px">
+
+<!-- make the text boxes -->
+
+<h2 id="TextBoxHeader" style="position:absolute;top:160px;left:40px">some words go here, depending on the button pressed</h2>
+
+<div id="TextBox"
+          style="position:absolute;
+                top:220px;
+                left:40px;
+                resize:none;
+                border:2px solid;
+                ">
+The text inside of here will explain what happens in the figures, and will change if buttons are pressed
+</div>
+
+<!-- some functions to change the text in the text boxes, this should
+probably be lumped into one function that takes the textbox IDs and
+the text to be printed as inputs, but I can't be bothered now -->
+
+<script>
+  function changeTextR1() {
+    MathJax.Hub.Typeset("TextBox");
+    document.getElementById("TextBoxHeader").innerHTML = "The Normal Phase";
+    document.getElementById("TextBox").innerHTML = "some words of explanation in here"
+  }
+</script>
+
+<script>
+  function changeTextR2() {
+    document.getElementById("TextBoxHeader").innerHTML = "The Superradiant Phase";
+    document.getElementById("TextBox").innerHTML = "words go here";
+  }
+</script>
+
+<script>
+  function changeTextR3() {
+    document.getElementById("TextBoxHeader").innerHTML = "The Normal Phase";
+    document.getElementById("TextBox").innerHTML = "some other words are here"
+  }
+</script>
+
+<script>
+function makeNormalButton() {
+  var btn = document.createElement("BUTTON");
+  btn.id = "NormalButton";
+  btn.innerHTML = "Normal";
+  btn.style.fontFamily = "Computer Modern Serif";
+  btn.style.fontSize = "15";
+  btn.style.backgroundColor = "rgb(161,224,255)";
+  btn.style.borderRadius = "25%";
+  btn.style.color = "black";
+  btn.style.padding = "4px";
+  btn.style.borderColor = "rgb(8,171,252)";
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub,btn]);
+  btn.style.position = "absolute";
+  btn.style.left = "500px";
+  btn.style.top = "220px";
+  document.body.appendChild(btn);
+  btn.addEventListener(
+  "click", function() {
+    alert("you clicked me");
+  }
+  )
+
+  var hdr = document.createElement("HEADER");
+  hdr.innerHTML = "<h2>Initial conditions:</h2>";
+  hdr.style.position = "absolute";
+  hdr.style.left = "500px";
+  hdr.style.top = "160px";
+  document.body.appendChild(hdr);
+}
+</script>
+
+<!-- create buttons and overlay them over the big image, when clicked
+they replace the above loaded images with images associated with the
+ regions on the big image -->
+
+ <button
+ onclick="document.getElementById('TopPanel').src='BlochSphereNormal.png';
+         document.getElementById('BottomPanel').src='PhotonNumberNormal.png';
+         changeTextR1()"
+ style="position:absolute;
+       top:750px;
+       left:300px;
+       border-radius:25%;
+       background-color:rgb(161,224,255);
+       color:black;
+       padding:4px;
+       text-align:center;
+       border-color:rgb(8,171,252)">
+ $\mathbf{R}_{1}$
+ </button>
+
+
+<button
+onclick="document.getElementById('TopPanel').src='BlochSphereSprRad.png';
+        document.getElementById('BottomPanel').src='PhotonNumberSprRad.png';
+        changeTextR2()"
+style="position:absolute;
+      top:650px;
+      left:188px;
+      border-radius:25%;
+      background-color:rgb(161,224,255);
+      color:black;
+      padding:4px;
+      text-align:center;
+      border-color:rgb(8,171,252)">
+$\mathbf{R}_{2}$
+</button>
+
+<button
+onclick="document.getElementById('TopPanel').src='BlochSphereNormal.png';
+        document.getElementById('BottomPanel').src='PhotonNumberNormal.png';
+        changeTextR3()"
+style="position:absolute;
+      top:500px;
+      left:60px;
+      border-radius:25%;
+      background-color:rgb(161,224,255);
+      color:black;
+      padding:4px;
+      border-color:rgb(8,171,252)">
+$\mathbf{R}_{4}$
+</button>
+
+
+<button onclick="makeNormalButton()"
+style="position:absolute;
+      top:490px;
+      left:165px;
+      border-radius:25%;
+      background-color:rgb(161,224,255);
+      color:black;
+      padding:4px;
+      border-color:rgb(8,171,252)">
+$\mathbf{R}_{3}$
+</button>
+
+
+<!--<p style="position:absolute;top:820px">Here $\kappa = \omega = \omega_0 = 1$</p>-->
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
