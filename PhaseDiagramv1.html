@@ -46,9 +46,15 @@ div {
 <!-- load initial images, maybe we should only import only the first
 image and leave blank windows until the buttons are clicked -->
 
-<img id="PhaseDiagram" src="PhaseDiagramHTML.png" style="position:absolute;top:300px;width:500px">
-<img id="TopPanel" src="BlochSphereNormal.png" style="position:absolute;top:290px;left:490px;width:280px">
-<img id="BottomPanel" src="PhotonNumberNormal.png" style="position:absolute;top:560px;left:490px;width:280px">
+<img id="PhaseDiagram"
+    src="PhaseDiagramHTML.png"
+    style="position:absolute;top:300px;width:500px">
+<img id="TopPanel"
+    src="HTML_BlochSphereNormal.png"
+    style="position:absolute;top:320px;left:500px;width:250px">
+<img id="BottomPanel"
+    src="PhotonNumberNormal.png"
+    style="position:absolute;top:560px;left:490px;width:280px">
 
 <!-- make the text boxes -->
 
@@ -127,7 +133,7 @@ they replace the above loaded images with images associated with the
  regions on the big image -->
 
  <button
- onclick="document.getElementById('TopPanel').src='BlochSphereNormal.png';
+ onclick="document.getElementById('TopPanel').src='HTML_BlochSphereNormal.png';
          document.getElementById('BottomPanel').src='PhotonNumberNormal.png';
          changeTextR1()"
  style="position:absolute;
@@ -144,7 +150,7 @@ they replace the above loaded images with images associated with the
 
 
 <button
-onclick="document.getElementById('TopPanel').src='BlochSphereSprRad.png';
+onclick="document.getElementById('TopPanel').src='HTML_BlochSphereSprRad.png';
         document.getElementById('BottomPanel').src='PhotonNumberSprRad.png';
         changeTextR2()"
 style="position:absolute;
@@ -160,7 +166,7 @@ $\mathbf{R}_{2}$
 </button>
 
 <button
-onclick="document.getElementById('TopPanel').src='BlochSphereNormal.png';
+onclick="document.getElementById('TopPanel').src='HTML_BlochSphereNormal.png';
         document.getElementById('BottomPanel').src='PhotonNumberNormal.png';
         changeTextR3()"
 style="position:absolute;
