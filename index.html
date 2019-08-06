@@ -5,7 +5,7 @@
       MathJax.Hub.Config({
         jax: ["input/TeX", "output/HTML-CSS"],
         extensions: ["tex2jax.js"],
-        "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+        "HTML-CSS": { preferredFont: "TeX", availableFonts: ["TeX"] },
         tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
         TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
         messageStyle: "none"
@@ -21,6 +21,7 @@
 body {
   font-family: "Computer Modern Serif", serif;
 }
+
 div {
   width:445px;
   max-width:445px;
@@ -45,13 +46,22 @@ div {
 <!-- load initial images, maybe we should only import only the first
 image and leave blank windows until the buttons are clicked -->
 
-<img id="PhaseDiagram" src="PhaseDiagramHTML.png" style="position:absolute;top:300px;width:500px">
-<img id="TopPanel" src="BlochSphereNormal.png" style="position:absolute;top:290px;left:490px;width:280px">
-<img id="BottomPanel" src="PhotonNumberNormal.png" style="position:absolute;top:560px;left:490px;width:280px">
+<h2 style="position:absolute;left:550px;top:305">Bloch Sphere</h2>
+<h2 style="position:absolute;left:550px;top:653px">Photon Number</h2>
+
+<img id="PhaseDiagram"
+    src="HTML_BigOlePhaseDiagram.png"
+    style="position:absolute;top:313px;width:487px">
+<img id="TopPanel"
+    src="WhatIsThisImageGoodFor.png"
+    style="position:absolute;top:360px;left:550px;width:250px;z-index:20;border:2px solid;padding:15px">
+<img id="BottomPanel"
+    src="AbsolutelyNothin.png"
+    style="position:absolute;top:708px;left:550px;width:250px;z-index:20;border:2px solid;padding:15px">
 
 <!-- make the text boxes -->
 
-<h2 id="TextBoxHeader" style="position:absolute;top:160px;left:40px">some words go here, depending on the button pressed</h2>
+<h2 id="TextBoxHeader" style="position:absolute;top:160px;left:40px"></h2>
 
 <div id="TextBox"
           style="position:absolute;
@@ -59,8 +69,10 @@ image and leave blank windows until the buttons are clicked -->
                 left:40px;
                 resize:none;
                 border:2px solid;
+                width:450px;
+                padding:1px
                 ">
-The text inside of here will explain what happens in the figures, and will change if buttons are pressed
+Click a button inside the phase diagram to see a Bloch sphere and photon number trajectory for a set of parameter values associated with each region.
 </div>
 
 <!-- some functions to change the text in the text boxes, this should
@@ -97,93 +109,219 @@ function makeNormalButton() {
   btn.style.fontFamily = "Computer Modern Serif";
   btn.style.fontSize = "15";
   btn.style.backgroundColor = "rgb(161,224,255)";
-  btn.style.borderRadius = "25%";
+  btn.style.borderRadius = "10%";
   btn.style.color = "black";
   btn.style.padding = "4px";
   btn.style.borderColor = "rgb(8,171,252)";
   MathJax.Hub.Queue(["Typeset",MathJax.Hub,btn]);
   btn.style.position = "absolute";
-  btn.style.left = "500px";
+  btn.style.left = "550px";
   btn.style.top = "220px";
   document.body.appendChild(btn);
   btn.addEventListener(
   "click", function() {
-    alert("you clicked me");
+    var hdr = document.getElementById("TextBoxHeader");
+    hdr.innerHTML = "The Normal Phase";
+    var BlochSphere = document.getElementById("TopPanel");
+    BlochSphere.src = "HTML_BlochSphereMultiNormal.png";
+    var PhotonNumber = document.getElementById("BottomPanel");
+    PhotonNumber.src = "HTML_PhotonNumberMultiNormal.png";
   }
   )
+
   var hdr = document.createElement("HEADER");
   hdr.innerHTML = "<h2>Initial conditions:</h2>";
   hdr.style.position = "absolute";
-  hdr.style.left = "500px";
+  hdr.style.left = "550px";
   hdr.style.top = "160px";
   document.body.appendChild(hdr);
 }
 </script>
+
+<script>
+function makeSprRadButton() {
+  var btn2 = document.createElement("BUTTON");
+  btn2.id = "SprRadButton";
+  btn2.innerHTML = "Superradiant";
+  btn2.style.fontFamily = "Computer Modern Serif";
+  btn2.style.fontSize = "15";
+  btn2.style.backgroundColor = "rgb(161,224,255)";
+  btn2.style.color = "black";
+  btn2.style.borderColor = "rgb(8,171,252)";
+  btn2.style.borderRadius = "10%";
+  btn2.style.padding = "4px";
+  btn2.style.position = "absolute";
+  btn2.style.left = "680px";
+  btn2.style.top = "220px";
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub,btn2]);
+  document.body.appendChild(btn2);
+  btn2.addEventListener(
+    "click", function() {
+      var hdr = document.getElementById("TextBoxHeader");
+      hdr.innnerHTML = "Superradiant Phase";
+      var BlochSphere = document.getElementById("TopPanel");
+      BlochSphere.src = "HTML_BlochSphereMultiSprRad.png";
+      var PhotonNumber = document.getElementById("BottomPanel");
+      PhotonNumber.src = "HTML_PhotonNumberMultiSprRad.png";
+    }
+  )
+}
+</script>
+
+<script>
+function changeTextR4() {
+  var hdr = document.getElementById("TextBoxHeader");
+  hdr.innerHTML = "The Oscillatory Phase";
+  var txt = document.getElementById("TextBox");
+  txt.innerHTML = "some words about the oscillatory phase go here"
+}
+</script>
+
+<script>
+function changeTextR5() {
+  var hdr = document.getElementById("TextBoxHeader");
+  hdr.innerHTML = "Chaos: isolated chaotic attractors";
+  var txt = document.getElementById("TextBox");
+  txt.innerHTML = "some words about chaos goes here"
+}
+</script>
+
+<script>
+function changeTextR6() {
+  var hdr = document.getElementById("TextBoxHeader");
+  hdr.innerHTML = "Chaos: collision of chaotic attractors";
+  var txt = document.getElementById("TextBox");
+  txt.innerHTML = "some words about chaos goes here"
+}
+</script>
+
+
+
 
 <!-- create buttons and overlay them over the big image, when clicked
 they replace the above loaded images with images associated with the
  regions on the big image -->
 
  <button
- onclick="document.getElementById('TopPanel').src='BlochSphereNormal.png';
-         document.getElementById('BottomPanel').src='PhotonNumberNormal.png';
+ onclick="document.getElementById('TopPanel').src='HTML_BlochSphereNormal.png';
+         document.getElementById('BottomPanel').src='HTML_PhotonNumberNormal.png';
          changeTextR1()"
  style="position:absolute;
-       top:750px;
-       left:300px;
+       top:900px;
+       left:400px;
        border-radius:25%;
        background-color:rgb(161,224,255);
        color:black;
        padding:4px;
        text-align:center;
-       border-color:rgb(8,171,252)">
+       border-color:rgb(8,171,252);
+       font-size:15">
  $\mathbf{R}_{1}$
  </button>
 
 
 <button
-onclick="document.getElementById('TopPanel').src='BlochSphereSprRad.png';
-        document.getElementById('BottomPanel').src='PhotonNumberSprRad.png';
+onclick="document.getElementById('TopPanel').src='HTML_BlochSphereSprRad.png';
+        document.getElementById('BottomPanel').src='HTML_PhotonNumberSprRad.png';
         changeTextR2()"
 style="position:absolute;
-      top:650px;
-      left:188px;
+      top:760px;
+      left:275px;
       border-radius:25%;
       background-color:rgb(161,224,255);
       color:black;
       padding:4px;
       text-align:center;
-      border-color:rgb(8,171,252)">
-$\mathbf{R}_{2}$
+      border-color:rgb(8,171,252);
+      font-size:15">
+$\mathbf{R}_{3}$
 </button>
 
 <button
-onclick="document.getElementById('TopPanel').src='BlochSphereNormal.png';
-        document.getElementById('BottomPanel').src='PhotonNumberNormal.png';
+onclick="document.getElementById('TopPanel').src='HTML_BlochSphereUpNormal.png';
+        document.getElementById('BottomPanel').src='HTML_PhotonNumberUpNormal.png';
         changeTextR3()"
 style="position:absolute;
-      top:500px;
-      left:60px;
+      top:450px;
+      left:120px;
       border-radius:25%;
       background-color:rgb(161,224,255);
       color:black;
       padding:4px;
-      border-color:rgb(8,171,252)">
+      border-color:rgb(8,171,252);
+      font-size:15">
 $\mathbf{R}_{4}$
 </button>
 
 
-<button onclick="makeNormalButton()"
+<button onclick="document.getElementById('TopPanel').src='HTML_BlochSphereMultiNormal.png';
+                 document.getElementById('BottomPanel').src='HTML_PhotonNumberMultiNormal.png';
+                 makeNormalButton();
+                 makeSprRadButton()"
 style="position:absolute;
-      top:490px;
-      left:165px;
+      top:780px;
+      left:450px;
       border-radius:25%;
       background-color:rgb(161,224,255);
       color:black;
       padding:4px;
-      border-color:rgb(8,171,252)">
-$\mathbf{R}_{3}$
+      border-color:rgb(8,171,252);
+      font-size:15">
+$\mathbf{R}_{2}$
 </button>
+
+
+<button onclick="document.getElementById('TopPanel').src='HTML_BlochSphereOscillation.png';
+                 document.getElementById('BottomPanel').src = 'HTML_PhotonNumberOscillation.png';
+                 changeTextR4()"
+style = "position:absolute;
+         top:600px;
+         left:300px;
+         border-radius:25%;
+         background-color:rgb(161,224,255);
+         color:black;
+         border-color:rgb(8,171,252);
+         padding:4px;
+         font-size:15"
+>
+$\mathbf{R}_{4}$
+</button>
+
+
+
+<button onclick="document.getElementById('TopPanel').src='HTML_BlochSphereChaos1.png';
+                 document.getElementById('BottomPanel').src='HTML_PhotonNumberChaos1.png';
+                 changeTextR5()"
+style="position:absolute;
+       top:465px;
+       left:350px;
+       border-radius:25%;
+       background-color:rgb(161,224,255);
+       color:black;
+       border-color:rgb(8,171,252);
+       padding:4px;
+       font-size:15"
+>
+$\mathbf{R}_{5}$
+</button>
+
+
+<button onclick="document.getElementById('TopPanel').src='HTML_BlochSphereChaos2.png';
+                 document.getElementById('BottomPanel').src='HTML_PhotonNumberChaos2.png';
+                 changeTextR6()"
+style="position:absolute;
+       top:360px;
+       left:350px;
+       border-radius:25%;
+       background-color:rgb(161,224,255);
+       color:black;
+       border-color:rgb(8,171,252);
+       padding:4px;
+       font-size:15"
+>
+$\mathbf{R}_{6}$
+</button>
+
 
 
 <!--<p style="position:absolute;top:820px">Here $\kappa = \omega = \omega_0 = 1$</p>-->
