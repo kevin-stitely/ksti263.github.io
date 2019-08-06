@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.12)  5 AUG 2019 10:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.12)  6 AUG 2019 17:54
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -672,42 +672,60 @@ LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
  ABD: EveryShipout initializing macros
-File: FiguresNoLabels/HTML_BlochSphereNormal.eps Graphic file (type eps)
+File: FiguresNoLabels/HTML_BigOlePhaseDiagram.eps Graphic file (type eps)
 
-<FiguresNoLabels/HTML_BlochSphereNormal.eps>
-LaTeX Font Info:    Try loading font information for U+msa on input line 32.
+<FiguresNoLabels/HTML_BigOlePhaseDiagram.eps>
+LaTeX Font Info:    Try loading font information for U+msa on input line 116.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 32.
+LaTeX Font Info:    Try loading font information for U+msb on input line 116.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 32.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 116.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 ) [1
 
 ]
-File: FiguresNoLabels/HTML_BlochSphereSprRad.eps Graphic file (type eps)
+Overfull \vbox (19.05212pt too high) has occurred while \output is active []
 
-<FiguresNoLabels/HTML_BlochSphereSprRad.eps> [2]
-File: FiguresNoLabels/HTML_BlochSphereNormal.eps Graphic file (type eps)
 
-<FiguresNoLabels/HTML_BlochSphereNormal.eps> [3]
-File: FiguresNoLabels/HTML_BlochSphereMultiSprRad.eps Graphic file (type eps)
+[2]
+File: FiguresNoLabels/HTML_BlochSphereUpNormal.eps Graphic file (type eps)
+ <FiguresNoLabels/HTML_BlochSphereUpNormal.eps> [3]
+File: FiguresNoLabels/HTML_PhotonNumberUpNormal.eps Graphic file (type eps)
 
-<FiguresNoLabels/HTML_BlochSphereMultiSprRad.eps> [4] (./FiguresHTML.aux) ) 
+<FiguresNoLabels/HTML_PhotonNumberUpNormal.eps> [4]
+File: FiguresNoLabels/HTML_BlochSphereOscillation.eps Graphic file (type eps)
+
+<FiguresNoLabels/HTML_BlochSphereOscillation.eps> [5]
+File: FiguresNoLabels/HTML_PhotonNumberOscillation.eps Graphic file (type eps)
+
+<FiguresNoLabels/HTML_PhotonNumberOscillation.eps> [6]
+File: FiguresNoLabels/HTML_BlochSphereChaos1.eps Graphic file (type eps)
+
+<FiguresNoLabels/HTML_BlochSphereChaos1.eps> [7]
+File: FiguresNoLabels/HTML_PhotonNumberChaos1.eps Graphic file (type eps)
+
+<FiguresNoLabels/HTML_PhotonNumberChaos1.eps> [8]
+File: FiguresNoLabels/HTML_BlochSphereChaos2.eps Graphic file (type eps)
+
+<FiguresNoLabels/HTML_BlochSphereChaos2.eps> [9]
+File: FiguresNoLabels/HTML_PhotonNumberChaos2.eps Graphic file (type eps)
+
+<FiguresNoLabels/HTML_PhotonNumberChaos2.eps> [10] (./FiguresHTML.aux) ) 
 Here is how much of TeX's memory you used:
- 16080 strings out of 492986
- 322225 string characters out of 6132611
+ 16083 strings out of 492986
+ 322827 string characters out of 6132611
  414481 words of memory out of 5000000
- 19295 multiletter control sequences out of 15000+600000
- 10396 words of font info for 42 fonts, out of 8000000 for 9000
+ 19296 multiletter control sequences out of 15000+600000
+ 7778 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,5n,65p,50969b,249s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,5n,65p,36943b,249s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on FiguresHTML.dvi (4 pages, 7004 bytes).
+Output written on FiguresHTML.dvi (10 pages, 8816 bytes).
