@@ -199,7 +199,6 @@ function changeTextR6() {
 
 
 
-
 <!-- create buttons and overlay them over the big image, when clicked
 they replace the above loaded images with images associated with the
  regions on the big image -->
@@ -207,7 +206,8 @@ they replace the above loaded images with images associated with the
  <button
  onclick="document.getElementById('TopPanel').src='HTML_BlochSphereNormal.png';
          document.getElementById('BottomPanel').src='HTML_PhotonNumberNormal.png';
-         changeTextR1()"
+         changeTextR1();
+         removeInitial()"
  style="position:absolute;
        top:900px;
        left:400px;
