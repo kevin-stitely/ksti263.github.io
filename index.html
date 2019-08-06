@@ -83,26 +83,28 @@ the text to be printed as inputs, but I can't be bothered now -->
   function changeTextR1() {
     MathJax.Hub.Typeset("TextBox");
     document.getElementById("TextBoxHeader").innerHTML = "The Normal Phase";
-    document.getElementById("TextBox").innerHTML = "some words of explanation in here"
+    document.getElementById("TextBox").innerHTML = "Here trajectories move down from the North pole of the Bloch sphere southwards. The photon number pulses briefly and tends to zero."
   }
 </script>
 
 <script>
   function changeTextR2() {
     document.getElementById("TextBoxHeader").innerHTML = "The Superradiant Phase";
-    document.getElementById("TextBox").innerHTML = "words go here";
+    document.getElementById("TextBox").innerHTML = "In the superradiant phase the final state on the Bloch sphere is shifted from the poles, and the photon number tends to a nonzero value.";
   }
 </script>
 
 <script>
   function changeTextR3() {
     document.getElementById("TextBoxHeader").innerHTML = "The Normal Phase";
-    document.getElementById("TextBox").innerHTML = "some other words are here"
+    document.getElementById("TextBox").innerHTML = "In this normal phase configuration, atomic states tend upwards. Once all spins are excited interactions cease and the photon number tends to zero."
   }
 </script>
 
 <script>
 function makeNormalButton() {
+  var text = document.getElementById("TextBox");
+  text.innerHTML = "Here the system has coexisting normal and superradiant phases. Pick a different initial condition on the right to see trajectories for each phase.";
   var btn = document.createElement("BUTTON");
   btn.id = "NormalButton";
   btn.innerHTML = "Normal";
@@ -158,7 +160,7 @@ function makeSprRadButton() {
   btn2.addEventListener(
     "click", function() {
       var hdr = document.getElementById("TextBoxHeader");
-      hdr.innnerHTML = "Superradiant Phase";
+      hdr.innerHTML = "The Superradiant Phase";
       var BlochSphere = document.getElementById("TopPanel");
       BlochSphere.src = "HTML_BlochSphereMultiSprRad.png";
       var PhotonNumber = document.getElementById("BottomPanel");
@@ -173,7 +175,7 @@ function changeTextR4() {
   var hdr = document.getElementById("TextBoxHeader");
   hdr.innerHTML = "The Oscillatory Phase";
   var txt = document.getElementById("TextBox");
-  txt.innerHTML = "some words about the oscillatory phase go here"
+  txt.innerHTML = "Here an oscillation cycle opens on the Bloch sphere after a Hopf bifurcation, creating oscillations in the photon number. "
 }
 </script>
 
@@ -182,7 +184,7 @@ function changeTextR5() {
   var hdr = document.getElementById("TextBoxHeader");
   hdr.innerHTML = "Chaos: isolated chaotic attractors";
   var txt = document.getElementById("TextBox");
-  txt.innerHTML = "some words about chaos goes here"
+  txt.innerHTML = "In this region the oscillation cycles undergo period-doubling cascades, creating two chaotic attractors which causes the photon number to jump erratically."
 }
 </script>
 
@@ -191,7 +193,7 @@ function changeTextR6() {
   var hdr = document.getElementById("TextBoxHeader");
   hdr.innerHTML = "Chaos: collision of chaotic attractors";
   var txt = document.getElementById("TextBox");
-  txt.innerHTML = "some words about chaos goes here"
+  txt.innerHTML = "Here the two chaotic attractors collide, when trajectories move between oscillating regions the photon number spikes and cascades downwards."
 }
 </script>
 
@@ -254,10 +256,11 @@ $\mathbf{R}_{4}$
 </button>
 
 
-<button onclick="document.getElementById('TopPanel').src='HTML_BlochSphereMultiNormal.png';
-                 document.getElementById('BottomPanel').src='HTML_PhotonNumberMultiNormal.png';
+<button onclick="document.getElementById('TopPanel').src='WhatIsThisImageGoodFor.png';
+                 document.getElementById('BottomPanel').src='AbsolutelyNothin.png';
                  makeNormalButton();
-                 makeSprRadButton()"
+                 makeSprRadButton();
+                 document.getElementById('TextBoxHeader').innerHTML = 'Multistability'"
 style="position:absolute;
       top:780px;
       left:450px;
