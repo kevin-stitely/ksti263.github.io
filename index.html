@@ -50,7 +50,7 @@ image and leave blank windows until the buttons are clicked -->
 <h2 style="position:absolute;left:550px;top:653px">Photon Number</h2>
 
 <img id="PhaseDiagram"
-    src="HTML_BigOlePhaseDiagram.png"
+    embed src="HTML_BigOlePhaseDiagram.svg"
     style="position:absolute;top:313px;width:487px">
 <img id="TopPanel"
     src="WhatIsThisImageGoodFor.png"
@@ -125,9 +125,9 @@ function makeNormalButton() {
     var hdr = document.getElementById("TextBoxHeader");
     hdr.innerHTML = "The Normal Phase";
     var BlochSphere = document.getElementById("TopPanel");
-    BlochSphere.src = "HTML_BlochSphereMultiNormal.png";
+    BlochSphere.src = "HTML_BlochSphereMultiNormal.svg";
     var PhotonNumber = document.getElementById("BottomPanel");
-    PhotonNumber.src = "HTML_PhotonNumberMultiNormal.png";
+    PhotonNumber.src = "HTML_PhotonNumberMultiNormal.svg";
   }
   )
 
@@ -162,9 +162,9 @@ function makeSprRadButton() {
       var hdr = document.getElementById("TextBoxHeader");
       hdr.innerHTML = "The Superradiant Phase";
       var BlochSphere = document.getElementById("TopPanel");
-      BlochSphere.src = "HTML_BlochSphereMultiSprRad.png";
+      BlochSphere.src = "HTML_BlochSphereMultiSprRad.svg";
       var PhotonNumber = document.getElementById("BottomPanel");
-      PhotonNumber.src = "HTML_PhotonNumberMultiSprRad.png";
+      PhotonNumber.src = "HTML_PhotonNumberMultiSprRad.svg";
     }
   )
 }
@@ -198,15 +198,13 @@ function changeTextR6() {
 </script>
 
 
-
-
 <!-- create buttons and overlay them over the big image, when clicked
 they replace the above loaded images with images associated with the
  regions on the big image -->
 
  <button
- onclick="document.getElementById('TopPanel').src='HTML_BlochSphereNormal.png';
-         document.getElementById('BottomPanel').src='HTML_PhotonNumberNormal.png';
+ onclick="document.getElementById('TopPanel').src='HTML_BlochSphereNormal.svg';
+         document.getElementById('BottomPanel').src='HTML_PhotonNumberNormal.svg';
          changeTextR1()"
  style="position:absolute;
        top:900px;
@@ -223,8 +221,8 @@ they replace the above loaded images with images associated with the
 
 
 <button
-onclick="document.getElementById('TopPanel').src='HTML_BlochSphereSprRad.png';
-        document.getElementById('BottomPanel').src='HTML_PhotonNumberSprRad.png';
+onclick="document.getElementById('TopPanel').src='HTML_BlochSphereSprRad.svg';
+        document.getElementById('BottomPanel').src='HTML_PhotonNumberSprRad.svg';
         changeTextR2()"
 style="position:absolute;
       top:760px;
@@ -240,8 +238,8 @@ $\mathbf{R}_{3}$
 </button>
 
 <button
-onclick="document.getElementById('TopPanel').src='HTML_BlochSphereUpNormal.png';
-        document.getElementById('BottomPanel').src='HTML_PhotonNumberUpNormal.png';
+onclick="document.getElementById('TopPanel').src='HTML_BlochSphereUpNormal_.svg';
+        document.getElementById('BottomPanel').src='HTML_PhotonNumberUpNormal.svg';
         changeTextR3()"
 style="position:absolute;
       top:450px;
@@ -274,8 +272,8 @@ $\mathbf{R}_{2}$
 </button>
 
 
-<button onclick="document.getElementById('TopPanel').src='HTML_BlochSphereOscillation.png';
-                 document.getElementById('BottomPanel').src = 'HTML_PhotonNumberOscillation.png';
+<button onclick="document.getElementById('TopPanel').src='HTML_BlochSphereOscillatory.svg';
+                 document.getElementById('BottomPanel').src = 'HTML_PhotonNumberOscillatory.svg';
                  changeTextR4()"
 style = "position:absolute;
          top:600px;
@@ -292,8 +290,8 @@ $\mathbf{R}_{4}$
 
 
 
-<button onclick="document.getElementById('TopPanel').src='HTML_BlochSphereChaos1.png';
-                 document.getElementById('BottomPanel').src='HTML_PhotonNumberChaos1.png';
+<button onclick="document.getElementById('TopPanel').src='HTML_BlochSphereChaos1.svg';
+                 document.getElementById('BottomPanel').src='HTML_PhotonNumberChaos1.svg';
                  changeTextR5()"
 style="position:absolute;
        top:465px;
@@ -309,8 +307,8 @@ $\mathbf{R}_{5}$
 </button>
 
 
-<button onclick="document.getElementById('TopPanel').src='HTML_BlochSphereChaos2.png';
-                 document.getElementById('BottomPanel').src='HTML_PhotonNumberChaos2.png';
+<button onclick="document.getElementById('TopPanel').src='HTML_BlochSphereChaos2.svg';
+                 document.getElementById('BottomPanel').src='HTML_PhotonNumberChaos2.svg';
                  changeTextR6()"
 style="position:absolute;
        top:360px;

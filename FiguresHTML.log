@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.12)  6 AUG 2019 17:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.12)  9 AUG 2019 11:33
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -696,11 +696,11 @@ Overfull \vbox (19.05212pt too high) has occurred while \output is active []
 
 
 [2]
-File: FiguresNoLabels/HTML_BlochSphereUpNormal.eps Graphic file (type eps)
- <FiguresNoLabels/HTML_BlochSphereUpNormal.eps> [3]
-File: FiguresNoLabels/HTML_PhotonNumberUpNormal.eps Graphic file (type eps)
+File: FiguresNoLabels/HTML_BlochSphereMultiSprRad.eps Graphic file (type eps)
+ <FiguresNoLabels/HTML_BlochSphereMultiSprRad.eps> [3]
+File: FiguresNoLabels/HTML_PhotonNumberMultiSprRad.eps Graphic file (type eps)
 
-<FiguresNoLabels/HTML_PhotonNumberUpNormal.eps> [4]
+<FiguresNoLabels/HTML_PhotonNumberMultiSprRad.eps> [4]
 File: FiguresNoLabels/HTML_BlochSphereOscillation.eps Graphic file (type eps)
 
 <FiguresNoLabels/HTML_BlochSphereOscillation.eps> [5]
@@ -721,11 +721,11 @@ File: FiguresNoLabels/HTML_PhotonNumberChaos2.eps Graphic file (type eps)
 <FiguresNoLabels/HTML_PhotonNumberChaos2.eps> [10] (./FiguresHTML.aux) ) 
 Here is how much of TeX's memory you used:
  16083 strings out of 492986
- 322827 string characters out of 6132611
+ 322845 string characters out of 6132611
  414481 words of memory out of 5000000
  19296 multiletter control sequences out of 15000+600000
  7778 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,5n,65p,36943b,249s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,5n,65p,36754b,249s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on FiguresHTML.dvi (10 pages, 8816 bytes).
+Output written on FiguresHTML.dvi (10 pages, 8820 bytes).
