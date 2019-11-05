@@ -1,0 +1,80 @@
+body {
+    font-family: "Computer Modern Serif", serif;
+}
+
+div{
+    margin-left:32px;
+}
+
+p{
+    padding:0px;
+    margin:0px;
+}
+
+h1{
+    margin-bottom:0px;
+}
+
+h3{
+    margin-top:10px;
+}
+
+#BlochHeading{
+    position:absolute;
+    left:550px;
+    top:255px;
+}
+
+#PhotonHeading{
+    position:absolute;
+    left:550px;
+    top:593px;
+}
+
+#PhaseDiagram{
+    position:absolute;
+    top:1000px;
+}
+
+#TopPanel{
+    position:absolute;
+    top:310px;
+    left:550px;
+    width:250px;
+    z-index:20;
+    border:3px solid;
+    padding:15px;
+}
+
+#BottomPanel{
+    position:absolute;
+    top:648px;
+    left:550px;
+    width:250px;
+    z-index:20;
+    border:3px solid;
+    padding:15px;
+}
+
+#TextBoxHeader{
+    position:absolute;
+    top:110px;
+    left:40px;
+}
+
+#TextBox{
+    position:absolute;
+    display:inline-block;
+    top:170px;
+    resize:none;
+    border:3px solid;
+    width:445px;
+    height:75px;
+    font-size:19px;
+}
+
+#container1{
+  position:absolute;
+  top:250px;
+  left:-55px
+}

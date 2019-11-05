@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
-<script type="text/javascript">
-  $(function() {
-    $('.map').maphilight();
-  });
-</script>
 <html lang="en">
 
     <head>
@@ -29,17 +22,17 @@
 
         <h2 id="BlochHeading">Bloch Sphere</h2>
         <h2 id="PhotonHeading">Photon Number</h2>
-        <div id="container1">
-        <img id="PhaseDiagram" alt="Phase Diagram" src="PhaseDiagramLabelled.png" usemap="#image-map" class="map" />
-        <map name="image-map">
+
+        <img id="PhaseDiagram" alt="Phase Diagram" src="HTML_BigOlePhaseDiagram-sized.png" usemap="#map" />
+        <map name="map">
             <area alt="Superradiant" title="Superradiant" onclick="changeRegion('HTML_BlochSphereSprRad.png', 'HTML_PhotonNumberSprRad.png', 'The Superradiant Phase', 'In the superradiant phase the final state on the Bloch sphere is shifted from the poles, and the photon number tends to a nonzero value.'); return false" href="" shape="poly" coords="478,221,478,436,456,457,420,489,374,524,345,543,329,551,324,548,320,553,311,558,297,561,280,561,268,561,249,555,232,547,212,534,194,518,178,499,163,479,153,457,149,438,148,432,152,426,152,419,167,383,173,387,183,391,195,394,209,393,228,391,260,381,287,369,318,351,342,334,378,307,418,274" />
             <area alt="Multistability" title="Multistability" onclick="changeRegion('WhatIsThisImageGoodFor.png', 'AbsolutelyNothin.png', 'Multistability', 'Here the system has coexisting normal and superradiant phases. Pick a different initial condition on the right to see trajectories for each phase.'); newButtons(); return false" href="" shape="poly" coords="478,443,478,488,362,537,406,506,437,481" />
             <area alt="Normal phase: downwards" title="Normal phase: downwards" onclick="changeRegion('HTML_BlochSphereNormal.png', 'HTML_PhotonNumberNormal.png', 'The Normal Phase - Downwards', 'Here trajectories move down from the North pole of the Bloch sphere southwards. The photon number pulses briefly and tends to zero.'); return false" href="" shape="poly" coords="479,493,478,674,36,674,143,436,146,453,154,471,165,491,182,512,200,529,221,546,241,557,262,564,282,567,305,565,322,559,327,561,331,557,336,553" />
             <area alt="Oscillatory phase" title="Oscillatory phase" onclick="changeRegion('HTML_BlochSphereOscPNG.png', 'HTML_PhotonNumberOscPNG.png', 'The Oscillatory Phase', 'Here an oscillation cycle opens on the Bloch sphere after a Hopf bifurcation, creating oscillations in the photon number.'); return false" href="" shape="poly" coords="478,108,478,214,404,280,349,324,302,355,270,372,236,384,215,388,196,390,178,386,168,379,187,337,192,338,269,287,360,214" />
-            <area alt="Chaos" title="Chaos" onclick="changeRegion('WhatIsThisImageGoodFor.png', 'AbsolutelyNothin.png', 'Chaos', 'In this region, there is chaos. Click to see either one of two isolated chaotic attractors, or a merged chaotic attractor'); newButtons2(); return false" href="" shape="poly" coords="333,9,193,323,189,333,199,330,216,321,239,307,255,295,274,282,296,267,320,247,339,230,366,209,405,175,433,151,457,128,483,107,483,8" />
-            <area alt="Normal phase: upwards" title="Normal phase: upwards" onclick="changeRegion('HTML_BlochSphereUpNormal.png', 'HTML_PhotonNumberUpNormal.png', 'The Normal Phase - Upwards', 'In this normal phase configuration, atomic states tend upwards. Once all spins are excited interactions cease and the photon number tends to zero.'); return false" href="" shape="poly" coords="34,6,34,667,140,428,140,422,142,419,144,406,146,395,150,388,148,383,150,377,154,375,161,361,159,356,162,352,165,350,308,6" />
+            <area alt="Chaos: isolated chaotic attractors" title="Chaos: isolated chaotic attractors" onclick="changeRegion('HTML_BlochSphereChaos1PNG.png', 'HTML_PhotonNumberChaos1PNG.png', 'Chaos: isolated chaotic attractors', 'In this region the oscillation cycles undergo period-doubling cascades, creating two chaotic attractors which causes the photon number to jump erratically.'); return false" href="" shape="poly" coords="478,14,479,88,366,190,304,243,259,279,207,319,192,331,196,323,197,318,250,255,288,214,338,160,418,74" />
+            <area alt="Chaos: collision of chaotic attractors" title="Chaos: collision of chaotic attractors" onclick="changeRegion('HTML_BlochSphereChaos2.png', 'HTML_PhotonNumberChaos2.png', 'Chaos: collision of chaotic attractors', 'Here the two chaotic attractors collide, when trajectories move between oscillating regions the photon number spikes and cascades downwards.'); return false" href="" shape="poly" coords="200, 308, 336, 6, 462, 7, 358, 120, 293, 195, 256, 238, 224, 276" />
+            <area alt="Normal phase: upwards" title="Normal phase: upwards" onclick="changeRegion('HTML_BlochSphereUpNormal.png', 'HTML_PhotonNumberUpNormal.png', 'The Normal Phase - Upwards', 'In this normal phase configuration, atomic states tend upwards. Once all spins are excited interactions cease and the photon number tends to zero.'); return false" href="" shape="poly" coords="34, 6, 34, 667, 140, 428, 140, 422, 142, 419, 144, 406, 146, 395, 150, 388, 148, 383, 150, 377, 154, 375, 161, 361, 159, 356, 162, 352, 165, 350, 308, 6" />
         </map>
-      </div>
         <img id="TopPanel" alt="Bloch Sphere" src="WhatIsThisImageGoodFor.png">
         <img id="BottomPanel" alt="Photon Number" src="AbsolutelyNothin.png">
     </body>
