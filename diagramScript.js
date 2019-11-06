@@ -26,9 +26,11 @@ function newButtons(){
     normalBtn.id = "NormalButton";
     normalBtn.innerHTML = "Normal";
     normalBtn.style.left = "550px";
+    normalBtn.style.fontSize = "15px";
     sprradBtn.style.left = "680px";
     sprradBtn.id = "SprRadButton";
     sprradBtn.innerHTML = "Superradiant";
+    sprradBtn.style.fontSize = "15px";
     document.body.appendChild(normalBtn);
     document.body.appendChild(sprradBtn);
     normalBtn.addEventListener(
@@ -60,9 +62,11 @@ function newButtons2() {
   chaos1Btn.id = "Chaos1Button";
   chaos1Btn.innerHTML = "Isolated chaotic attractors";
   chaos1Btn.style.left = "550px";
+  chaos1Btn.style.fontSize = "15px";
   chaos2Btn.style.left = "750px";
   chaos2Btn.id = "Chaos2Button";
   chaos2Btn.innerHTML = "Merged chaotic attractor";
+  chaos2Btn.style.fontSize = "15px";
   document.body.appendChild(chaos1Btn);
   document.body.appendChild(chaos2Btn);
   chaos1Btn.addEventListener(
@@ -77,6 +81,42 @@ function newButtons2() {
       document.getElementById("TextBoxHeader").innerHTML = "Chaos - Merged Chaotic Attractor";
       document.getElementById("TopPanel").src = "HTML_BlochSphereChaos2.png";
       document.getElementById("BottomPanel").src = "HTML_PhotonNumberChaos2.png";
+    }
+  )
+}
+
+function newButtons3() {
+  var hdr = document.createElement("HEADER");
+  hdr.id = "multi2Header";
+  hdr.innerHTML = "<h2>Initial conditions:</h2>";
+  hdr.style.position = "absolute";
+  hdr.style.left = "550px";
+  hdr.style.top = "160px";
+  document.body.appendChild(hdr);
+  var normal2Btn = makeNewButton();
+  var sprrad2Btn = makeNewButton();
+  normal2Btn.id = "Normal2Button";
+  normal2Btn.innerHTML = "Normal";
+  normal2Btn.style.left = "550px";
+  normal2Btn.style.fontSize = "15px";
+  sprrad2Btn.style.left = "680px";
+  sprrad2Btn.id = "SprRad2Button";
+  sprrad2Btn.innerHTML = "Superradiant";
+  sprrad2Btn.style.fontSize = "15px";
+  document.body.appendChild(normal2Btn);
+  document.body.appendChild(sprrad2Btn);
+  normal2Btn.addEventListener(
+    "click", function() {
+      document.getElementById("TextBoxHeader").innerHTML = "Multistability - The Normal Phase";
+      document.getElementById("TopPanel").src = "HTML_BlochSphereMulti2Normal.png";
+      document.getElementById("BottomPanel").src = "HTML_PhotonNumberMulti2Normal.png";
+    }
+  )
+  sprrad2Btn.addEventListener(
+    "click", function() {
+      document.getElementById("TextBoxHeader").innerHTML = "Multistability - The Superradiant Phase";
+      document.getElementById("TopPanel").src = "HTML_BlochSPhereMulti2SprRad.png";
+      document.getElementById("BottomPanel").src = "HTML_PhotonNumberMulti2SprRad.png";
     }
   )
 }
@@ -106,13 +146,22 @@ function changeRegion(topImg, bottomImg, textboxHeader, textboxText){
         document.getElementById('NormalButton').outerHTML = "";
     }
     if(document.getElementById('Chaos1Button')){
-      document.getElemebtById('Chaos1Button').outerHTML = "";
+      document.getElementById('Chaos1Button').outerHTML = "";
     }
     if(document.getElementById('Chaos2Button')){
       document.getElementById('Chaos2Button').outerHTML = "";
     }
     if(document.getElementById('chaosHeader')){
       document.getElementById('chaosHeader').outerHTML = "";
+    }
+    if(document.getElementById('SprRad2Button')) {
+      document.getElementById('SprRad2Button').outerHTML = "";
+    }
+    if(document.getElementById('Normal2Button')){
+      document.getElementById('Normal2Button').outerHTML = "";
+    }
+    if(document.getElementById('multi2Header')){
+      document.getElementById('multi2Header').outerHTML = "";
     }
     document.getElementById('TopPanel').src=topImg;
     document.getElementById('BottomPanel').src=bottomImg;
