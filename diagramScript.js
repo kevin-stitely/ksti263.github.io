@@ -115,7 +115,7 @@ function newButtons3() {
   sprrad2Btn.addEventListener(
     "click", function() {
       document.getElementById("TextBoxHeader").innerHTML = "Multistability - The Superradiant Phase";
-      document.getElementById("TopPanel").src = "HTML_BlochSPhereMulti2SprRad.png";
+      document.getElementById("TopPanel").src = "HTML_BlochSphereMulti2SprRad.png";
       document.getElementById("BottomPanel").src = "HTML_PhotonNumberMulti2SprRad.png";
     }
   )
