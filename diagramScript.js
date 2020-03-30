@@ -36,15 +36,15 @@ function newButtons(){
     normalBtn.addEventListener(
         "click", function() {
             document.getElementById("TextBoxHeader").innerHTML = "Multistability - The Normal Phase";
-            document.getElementById("TopPanel").src = "HTML_BlochSphereMultiNormal.png";
-            document.getElementById("BottomPanel").src = "HTML_PhotonNumberMultiNormal.png";
+            document.getElementById("TopPanel").src = "BlochSphereMultiNormal.png";
+            document.getElementById("BottomPanel").src = "PhotonNumberMultiNormal.png";
         }
     )
     sprradBtn.addEventListener(
         "click", function() {
             document.getElementById("TextBoxHeader").innerHTML = "Multistability - The Superradiant Phase";
-            document.getElementById("TopPanel").src = "HTML_BlochSphereMultiSprRad.png";
-            document.getElementById("BottomPanel").src = "HTML_PhotonNumberMultiSprRadPNG.png";
+            document.getElementById("TopPanel").src = "BlochSphereMultiSprRad.png";
+            document.getElementById("BottomPanel").src = "PhotonNumberMultiSprRad.png";
         }
     )
 }
@@ -72,15 +72,15 @@ function newButtons2() {
   chaos1Btn.addEventListener(
     "click", function() {
       document.getElementById("TextBoxHeader").innerHTML = "Chaos - Isolated Chaotic Attractors";
-      document.getElementById("TopPanel").src = "HTML_BlochSphereChaos1PNG.png";
-      document.getElementById("BottomPanel").src = "HTML_PhotonNumberChaos1PNG.png";
+      document.getElementById("TopPanel").src = "BlochSphereChaos1.png";
+      document.getElementById("BottomPanel").src = "PhotonNumberChaos1.png";
     }
   )
   chaos2Btn.addEventListener(
     "click", function() {
       document.getElementById("TextBoxHeader").innerHTML = "Chaos - Merged Chaotic Attractor";
-      document.getElementById("TopPanel").src = "HTML_BlochSphereChaos2.png";
-      document.getElementById("BottomPanel").src = "HTML_PhotonNumberChaos2.png";
+      document.getElementById("TopPanel").src = "BlochSphereChaos2.png";
+      document.getElementById("BottomPanel").src = "PhotonNumberChaos2.png";
     }
   )
 }
@@ -108,15 +108,15 @@ function newButtons3() {
   normal2Btn.addEventListener(
     "click", function() {
       document.getElementById("TextBoxHeader").innerHTML = "Multistability - The Normal Phase";
-      document.getElementById("TopPanel").src = "HTML_BlochSphereMulti2Normal.png";
-      document.getElementById("BottomPanel").src = "HTML_PhotonNumberMulti2Normal.png";
+      document.getElementById("TopPanel").src = "BlochSphereMulti2Normal.png";
+      document.getElementById("BottomPanel").src = "PhotonNumberMulti2Normal.png";
     }
   )
   sprrad2Btn.addEventListener(
     "click", function() {
       document.getElementById("TextBoxHeader").innerHTML = "Multistability - The Superradiant Phase";
-      document.getElementById("TopPanel").src = "HTML_BlochSphereMulti2SprRad.png";
-      document.getElementById("BottomPanel").src = "HTML_PhotonNumberMulti2SprRad.png";
+      document.getElementById("TopPanel").src = "BlochSphereMulti2SprRad.png";
+      document.getElementById("BottomPanel").src = "PhotonNumberMulti2SprRad.png";
     }
   )
 }
